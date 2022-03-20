@@ -20,26 +20,26 @@
                 <div class="new_user">
                     <div class="form-group">
                         <label for="name" class="text-light">Name</label>
-                        <input type="hidden" name="id" value="">
-                        <input type="text" name="name" value="" placeholder="Alfred">
+                        <input type="hidden" name="id" value="<%= user._id%>">
+                        <input type="text" name="name" value="<%= user.name%>" placeholder="Alfred">
                     </div>
                     <div class="form-group">
-                        <label for="name" class="text-light">Surname</label>
-                        <input type="hidden" name="id" value="">
-                        <input type="text" name="surname" value="" placeholder="Pacino">
+                        <label for="surname" class="text-light">Surname</label>
+                        <input type="hidden" name="id" value="<%= user._id%>">
+                        <input type="text" name="surname" value="<%= user.surname%>" placeholder="Pacino">
                     </div>
                     <div class="form-group">
                         <label for="Email" class="text-light">E-mail</label>
-                        <input type="text" name="email" value="" placeholder="example@outlook.com">
+                        <input type="text" name="email" value="<%= user.email%>" placeholder="example@outlook.com">
                     </div>
                     <div class="form-group">
                         <label for="status" class="text-light">Status</label>
                         <div class="radio inline">
-                            <input type="radio" id="Active" name="status" value="Active">
+                            <input type="radio" id="Active" name="status" value="Active"<%= user.status=='Active'?'checked':''%>>
                             <label for="Active" class="radio-label">Active</label>
                         </div>
                         <div class="radio inline">
-                            <input type="radio" id="Inactive" name="status" value="Inactive">
+                            <input type="radio" id="Inactive" name="status" value="Inactive"<%= user.status=='Inactive'?'checked':''%>>
                             <label for="Inactive" class="radio-label">Inactive</label>
                         </div>
                     </div>
